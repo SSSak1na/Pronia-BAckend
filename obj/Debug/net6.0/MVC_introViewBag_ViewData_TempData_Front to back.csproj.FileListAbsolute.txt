@@ -1,0 +1,29 @@
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\bin\Debug\net6.0\appsettings.json
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\bin\Debug\net6.0\MVC_introViewBag_ViewData_TempData_Front to back.exe
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\bin\Debug\net6.0\MVC_introViewBag_ViewData_TempData_Front to back.deps.json
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\bin\Debug\net6.0\MVC_introViewBag_ViewData_TempData_Front to back.runtimeconfig.json
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\bin\Debug\net6.0\MVC_introViewBag_ViewData_TempData_Front to back.dll
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\bin\Debug\net6.0\MVC_introViewBag_ViewData_TempData_Front to back.pdb
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\obj\Debug\net6.0\MVC_introViewBag_ViewData_TempData_Front to back.csproj.AssemblyReference.cache
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\obj\Debug\net6.0\MVC_introViewBag_ViewData_TempData_Front to back.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\obj\Debug\net6.0\MVC_introViewBag_ViewData_TempData_Front to back.AssemblyInfoInputs.cache
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\obj\Debug\net6.0\MVC_introViewBag_ViewData_TempData_Front to back.AssemblyInfo.cs
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\obj\Debug\net6.0\MVC_introViewBag_ViewData_TempData_Front to back.csproj.CoreCompileInputs.cache
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\obj\Debug\net6.0\MVC_introViewBag_ViewData_TempData_Front to back.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\obj\Debug\net6.0\MVC_introViewBag_ViewData_TempData_Front to back.RazorAssemblyInfo.cache
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\obj\Debug\net6.0\MVC_introViewBag_ViewData_TempData_Front to back.RazorAssemblyInfo.cs
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\obj\Debug\net6.0\staticwebassets\msbuild.MVC_introViewBag_ViewData_TempData_Front to back.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\obj\Debug\net6.0\staticwebassets\msbuild.build.MVC_introViewBag_ViewData_TempData_Front to back.props
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.MVC_introViewBag_ViewData_TempData_Front to back.props
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.MVC_introViewBag_ViewData_TempData_Front to back.props
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\obj\Debug\net6.0\scopedcss\bundle\MVC_introViewBag_ViewData_TempData_Front to back.styles.css
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\obj\Debug\net6.0\MVC_introViewBag_ViewData_TempData_Front to back.dll
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\obj\Debug\net6.0\refint\MVC_introViewBag_ViewData_TempData_Front to back.dll
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\obj\Debug\net6.0\MVC_introViewBag_ViewData_TempData_Front to back.pdb
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\obj\Debug\net6.0\MVC_introViewBag_ViewData_TempData_Front to back.genruntimeconfig.cache
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\obj\Debug\net6.0\ref\MVC_introViewBag_ViewData_TempData_Front to back.dll
+C:\Users\Sanan\Desktop\Method\MVC_introViewBag_ViewData_TempData_Front to back\bin\Debug\net6.0\MVC_introViewBag_ViewData_TempData_Front to back.staticwebassets.runtime.json
