@@ -8,5 +8,8 @@
         public string Position { get; set; }
         public string Comment { get; set; }
         public string ImageURL { get; set; }
+
+        public int SpecialitiesID { get; set; }
+        public Specialities Speciality { get; set; }
     }
 }
