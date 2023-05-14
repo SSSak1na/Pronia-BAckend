@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using MVC_introViewBag_ViewData_TempData_Front_to_back.DAL;
+using MVC_introViewBag_ViewData_TempData_Front_to_back.Models;
 using System;
 
 namespace MVC_introViewBag_ViewData_TempData_Front_to_back.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
-        {
 
         private readonly AppDbContext _context;
 
@@ -17,11 +18,35 @@ namespace MVC_introViewBag_ViewData_TempData_Front_to_back.Controllers
         public IActionResult Index()
         {
 
+            List<Vehicles> vehicles = _context.Vehicles.Include(p => p.Images).ToList();
+            ViewData["Vehicles"] = vehicles;
 
-            List<Slides> slides = _context.Slides.OrderBy(s => s.Order).Take(3).ToList();
-            List<Product> products = _context.Products.ToList();
-
-            List<Users> users = _context.Users.Include(x => x.Speciality).ToList();
+            return View();
         }
+
+
+        public IActionResult Detail(int? Id)
+        {
+
+
+
+            if (Id == null || Id < 1) return BadRequest();
+
+            var vehicles = _context.Vehicles
+        .Include(p => p.VehicleTags).ThenInclude(v => v.Tags)
+        .Include(t => t.Images)
+        .Include(b => b.BodyType)
+        .Include(c => c.VehicleColors).ThenInclude(v => v.Colors)
+
+        .FirstOrDefault(v => v.Id == Id);
+            if (vehicles == null) return NotFound();
+
+
+
+            return View(vehicles);
+        }
+
+
     }
 }
+

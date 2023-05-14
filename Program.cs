@@ -1,13 +1,19 @@
+using MVC_introViewBag_ViewData_TempData_Front_to_back.DAL;
 using System;
 
 var builder = WebApplication.CreateBuilder(args);
-
-var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
-object value = builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"))); app.UseStaticFiles();
+builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+var app = builder.Build();
+app.UseStaticFiles();
 
 app.MapControllerRoute(
     name: "Default",
-    pattern: "{controller=home}/{action=index}/{id?}");
+    pattern: "{area:exists}/{Controller=home}/{action=index}/{id?}");
+
+
+app.MapControllerRoute(
+    name: "Default",
+    pattern: "{Controller=home}/{action=index}/{id?}");
 
 app.Run();
