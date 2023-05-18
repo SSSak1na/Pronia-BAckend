@@ -17,6 +17,8 @@ namespace MVC_introViewBag_ViewData_TempData_Front_to_back.DAL
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<ProductTag> ProductTags { get; set; }
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<Profession> Professions { get; set; }
 
 
 

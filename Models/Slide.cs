@@ -2,9 +2,8 @@
 
 namespace MVC_introViewBag_ViewData_TempData_Front_to_back.Models
 {
-    public class Slide
+    public class Slide:BaseEntitity
     {
-        public int Id { get; set; }
         public string Title { get; set; }
         public string SubTitle { get; set; }
 

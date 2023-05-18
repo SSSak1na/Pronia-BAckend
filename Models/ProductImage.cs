@@ -1,8 +1,7 @@
 ﻿namespace MVC_introViewBag_ViewData_TempData_Front_to_back.Models
 {
-    public class ProductImage
+    public class ProductImage:BaseEntitity
     {
-        public int Id { get; set; }
         public string Image { get; set; }
         public bool? IsPrimary { get; set; }
 
