@@ -9,44 +9,84 @@ namespace MVC_introViewBag_ViewData_TempData_Front_to_back.Areas.Admin.Controlle
     public class ClientController : Controller
     {
         private readonly AppDbContext _context;
-
         public ClientController(AppDbContext context)
         {
             _context = context;
         }
         public async Task<IActionResult> Index()
         {
-            List<Client> clients = await _context.Clients.Include(c=>c.Profession).ToListAsync();
+            List<Client> clients = await _context.Clients.Include(c => c.Profession).ToListAsync();
+
             return View(clients);
         }
         public async Task<IActionResult> Create()
         {
-            ViewBag.Proffesions = await _context.Professions.ToListAsync();
+            ViewBag.Professions = await _context.Professions.ToListAsync();
             return View();
         }
         [HttpPost]
-
-
         public async Task<IActionResult> Create(Client client)
         {
-            if(!ModelState.IsValid) 
+            if (client.ProfessionId == 0)
             {
-                ViewBag.Proffesions = await _context.Professions.ToListAsync();
-
-                return View(client);
+                ModelState.AddModelError("ProfessionId", "Zehmet olmasa Profession secin");
+                ViewBag.Professions = await _context.Professions.ToListAsync();
+                return View();
             }
-            bool result=await _context.Professions.AnyAsync(p=>p.Id == client.ProfessionId);
-            if(!result)
+
+            bool result = await _context.Professions.AnyAsync(p => p.Id == client.ProfessionId);
+            if (!result)
             {
-                
-               ModelState.AddModelError("ProfessionId", "Bu Id uygun ixtisas tapilmadi, zehmet olmasa duzgun daxil edin");
-                ViewBag.Proffesions = await _context.Professions.ToListAsync();
+
+                ModelState.AddModelError("ProfessionId", "Bu id-li ixtisas yoxdu");
+                ViewBag.Professions = await _context.Professions.ToListAsync();
                 return View();
             }
 
             await _context.Clients.AddAsync(client);
             await _context.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index));
+
+        }
+        public async Task<IActionResult> Update(int? id)
+        {
+            if (id == null || id < 1) return BadRequest();
+
+            Client existed = await _context.Clients.FirstOrDefaultAsync(c => c.Id == id);
+
+            if (existed == null) return NotFound();
+            ViewBag.Professions = await _context.Professions.ToListAsync();
+
+            return View(existed);
+
+        }
+        [HttpPost]
+        public async Task<IActionResult> Update(int? id, Client client)
+        {
+            if (id == null || id < 1) return BadRequest();
+
+            Client existed = await _context.Clients.FirstOrDefaultAsync(c => c.Id == id);
+
+            if (existed == null) return NotFound();
+
+            bool result = await _context.Professions.AnyAsync(p => p.Id == client.ProfessionId);
+            if (!result)
+            {
+
+                ModelState.AddModelError("ProfessionId", "Bu id-li ixtisas yoxdu");
+                ViewBag.Professions = await _context.Professions.ToListAsync();
+                return View(existed);
+            }
+
+            existed.Name = client.Name;
+            existed.Surname = client.Surname;
+            existed.Message = client.Message;
+            existed.ProfessionId = client.ProfessionId;
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+
         }
     }
 }

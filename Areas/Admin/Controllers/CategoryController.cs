@@ -21,7 +21,6 @@ namespace MVC_introViewBag_ViewData_TempData_Front_to_back.Areas.Admin.Controlle
 
             return View(categories);
         }
-
         public IActionResult Create()
         {
             return View();
@@ -39,19 +38,14 @@ namespace MVC_introViewBag_ViewData_TempData_Front_to_back.Areas.Admin.Controlle
                 .AnyAsync(c => c.Name.Trim().ToLower() == category.Name.Trim().ToLower());
             if (result)
             {
-                ModelState.AddModelError("Name", "Bu adda kateqoriya artiq movcuddur");
+                ModelState.AddModelError("Name", "Bu adda category artiq movcuddur");
                 return View();
             }
-
-
             await _context.Categories.AddAsync(category);
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
         }
-
-
-
         public async Task<IActionResult> Update(int? id)
         {
             if (id == null || id < 1) return BadRequest();
@@ -61,7 +55,6 @@ namespace MVC_introViewBag_ViewData_TempData_Front_to_back.Areas.Admin.Controlle
             if (existed == null) return NotFound();
 
             return View(existed);
-
         }
 
         [HttpPost]
@@ -86,7 +79,7 @@ namespace MVC_introViewBag_ViewData_TempData_Front_to_back.Areas.Admin.Controlle
                 .AnyAsync(c => c.Name.Trim().ToLower() == category.Name.Trim().ToLower() && c.Id != existed.Id);
             if (result)
             {
-                ModelState.AddModelError("Name", "Bu adda kateqoriya artiq movcuddur");
+                ModelState.AddModelError("Name", "Bu adda category artiq movcuddur");
                 return View(existed);
             }
 
@@ -96,8 +89,6 @@ namespace MVC_introViewBag_ViewData_TempData_Front_to_back.Areas.Admin.Controlle
 
             return RedirectToAction(nameof(Index));
         }
-
-
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || id < 1) return BadRequest();
@@ -105,13 +96,11 @@ namespace MVC_introViewBag_ViewData_TempData_Front_to_back.Areas.Admin.Controlle
             Category existed = await _context.Categories.FirstOrDefaultAsync(c => c.Id == id);
 
             if (existed == null) return NotFound();
-
-
             _context.Categories.Remove(existed);
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
-
         }
     }
 }
+

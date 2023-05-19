@@ -16,7 +16,8 @@ namespace MVC_introViewBag_ViewData_TempData_Front_to_back.Controllers
             _context = context;
         }
         public IActionResult Index()
-        {  List<Slide> slides = _context.Slides.OrderBy(s => s.Order).Take(3).ToList();
+        {
+            List<Slide> slides = _context.Slides.OrderBy(s => s.Order).Take(3).ToList();
 
             List<Product> products = _context.Products.Include(p => p.Category).Include(p => p.ProductImages).ToList();
 
@@ -25,7 +26,8 @@ namespace MVC_introViewBag_ViewData_TempData_Front_to_back.Controllers
                 Sliders = slides,
                 Products = products
             };
-             return View(homeVM);
+
+            return View(homeVM);
         }
         public IActionResult Details(int? id)
         {
@@ -38,13 +40,16 @@ namespace MVC_introViewBag_ViewData_TempData_Front_to_back.Controllers
                 .FirstOrDefault(p => p.Id == id);
 
             if (product == null) return NotFound();
+           
             List<Product> products = _context.Products.Include(p => p.ProductImages).Where(p => p.CategoryId == product.CategoryId && p.Id != product.Id).ToList();
+            
             DetailsVM detailsVM = new DetailsVM
             {
                 Product = product,
                 Products = products
             };
-               return View(detailsVM);
+
+            return View(detailsVM);
         }
         public IActionResult About()
         {

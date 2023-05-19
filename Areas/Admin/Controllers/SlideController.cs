@@ -2,10 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using MVC_introViewBag_ViewData_TempData_Front_to_back.DAL;
 using MVC_introViewBag_ViewData_TempData_Front_to_back.Models;
+using MVC_introViewBag_ViewData_TempData_Front_to_back.Utilities.Extensions;
 
 namespace MVC_introViewBag_ViewData_TempData_Front_to_back.Areas.Admin.Controllers
 {
-    [Area("ProniaAdmin")]
+      [Area("Admin")]
     public class SlideController : Controller
     {
         private readonly AppDbContext _context;
@@ -57,6 +58,9 @@ namespace MVC_introViewBag_ViewData_TempData_Front_to_back.Areas.Admin.Controlle
 
 
         }
+
+
+
         public async Task<IActionResult> Update(int? id)
         {
             if (id == null || id < 1) return BadRequest();
@@ -125,3 +129,8 @@ namespace MVC_introViewBag_ViewData_TempData_Front_to_back.Areas.Admin.Controlle
 
 
         }
+    }
+}
+
+
+
